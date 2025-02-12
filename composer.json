@@ -1,22 +1,26 @@
 {
-    "name": "remind/name",
+    "name": "remind/teaser",
     "type": "typo3-cms-extension",
-    "description": "[DESCRIPTION]",
+    "description": "REMIND - Teaser",
     "license": [ "GPL-3.0-or-later" ],
     "authors": [
         {
             "name": "REMIND GmbH",
             "email": "technik@remind.de"
+        },
+        {
+            "name": "Dominik Lehrl",
+            "email": "d.lehrl@remind.de"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Remind\\[NAME]\\": "Classes"
+            "Remind\\Teaser\\": "Classes/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Remind\\[NAME]\\Tests\\": "Tests"
+            "Remind\\Teaser\\Tests\\": "Tests/"
         }
     },
     "config": {

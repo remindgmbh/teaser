@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4c34038f7b23b192c315cb336bcb25e",
+    "content-hash": "9feacff7984b956bd7857dfe34719a98",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1860,6 +1860,71 @@
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
             },
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "remind/extbase",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/remindgmbh/extbase.git",
+                "reference": "93ef040743148e51267d6d4efed211b04cdd219d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/remindgmbh/extbase/zipball/93ef040743148e51267d6d4efed211b04cdd219d",
+                "reference": "93ef040743148e51267d6d4efed211b04cdd219d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2",
+                "typo3/cms-core": "^12.4"
+            },
+            "require-dev": {
+                "slevomat/coding-standard": "^8.11",
+                "squizlabs/php_codesniffer": "^3.7"
+            },
+            "suggest": {
+                "remind/headless": "Using Remind\\Extbase\\Service\\JsonService requires remind/headless"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "web-dir": ".build/web",
+                    "extension-key": "rmnd_extbase",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Remind\\Extbase\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "REMIND GmbH",
+                    "email": "technik@remind.de"
+                },
+                {
+                    "name": "David Mellen",
+                    "email": "d.mellen@remind.de"
+                }
+            ],
+            "description": "REMIND - Extbase",
+            "keywords": [
+                "REMIND",
+                "cms",
+                "extbase",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://github.com/remindgmbh/extbase/issues",
+                "source": "https://github.com/remindgmbh/extbase/tree/v1.2.0"
+            },
+            "time": "2024-05-02T13:44:28+00:00"
         },
         {
             "name": "symfony/cache",
@@ -6044,7 +6109,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "remind/extbase": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

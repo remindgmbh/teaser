@@ -35,6 +35,7 @@
         }
     },
     "require": {
+        "remind/extbase": "^1.2 | dev-develop",
         "typo3/cms-core": "^12.4"
     },
     "require-dev": {

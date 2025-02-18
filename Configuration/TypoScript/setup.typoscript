@@ -1,0 +1,29 @@
+plugin {
+    tx_teaser {
+        settings {
+            jsonFields {
+                Remind\Teaser\Domain\Model\Teaser = title,subtitle,bodytext,image,link
+            }
+            displayNameFields = title,subtitle
+        }
+    }
+}
+
+tt_content {
+    teaser_selectionlist =< lib.contentElementWithHeader
+    teaser_selectionlist {
+        fields {
+            content {
+                fields {
+                    data = USER
+                    data {
+                        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                        vendorName = Remind
+                        extensionName = Teaser
+                        pluginName = SelectionList
+                    }
+                }
+            }
+        }
+    }
+}

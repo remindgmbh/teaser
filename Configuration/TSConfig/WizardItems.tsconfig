@@ -1,0 +1,14 @@
+mod.wizards.newContentElement.wizardItems {
+    common {
+        elements {
+            teaser_selectionlist {
+                iconIdentifier = content-card-group
+                title = LLL:EXT:rmnd_teaser/Resources/Private/Language/locallang_tca.xlf:selectionList
+                tt_content_defValues {
+                    CType = teaser_selectionlist
+                }
+            }
+        }
+        show := addToList(teaser_selectionlist)
+    }
+}

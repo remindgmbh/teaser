@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" product-name="rmnd_teaser">
+        <header/>
+        <body>
+            <trans-unit id="records">
+                <source>Records</source>
+            </trans-unit>
+            <trans-unit id="selection">
+                <source>Selection</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

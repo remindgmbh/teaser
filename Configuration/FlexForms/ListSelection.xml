@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<T3DataStructure>
+    <sheets>
+        <teaser>
+            <ROOT>
+                <sheetTitle>LLL:EXT:rmnd_teaser/Resources/Private/Language/locallang_flex.xlf:records</sheetTitle>
+                <type>array</type>
+                <el>
+                    <records>
+                        <label>LLL:EXT:rmnd_teaser/Resources/Private/Language/locallang_flex.xlf:selection</label>
+                        <description></description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectMultipleSideBySide</renderType>
+                            <size>7</size>
+                            <foreign_table>tx_teaser_domain_model_teaser</foreign_table>
+                            <foreign_table_where>AND tx_teaser_domain_model_teaser.pid = (SELECT pages FROM tt_content WHERE uid=###THIS_UID###)</foreign_table_where>
+                        </config>
+                    </records>
+                </el>
+            </ROOT>
+        </teaser>
+    </sheets>
+</T3DataStructure>

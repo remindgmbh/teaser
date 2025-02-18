@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" product-name="rmnd_teaser">
+        <header/>
+        <body>
+            <trans-unit id="teaser">
+                <target>Teaser</target>
+            </trans-unit>
+            <trans-unit id="title">
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="subtitle">
+                <target>Untertitel</target>
+            </trans-unit>
+            <trans-unit id="bodytext">
+                <target>Text</target>
+            </trans-unit>
+            <trans-unit id="link">
+                <target>Link</target>
+            </trans-unit>
+            <trans-unit id="image">
+                <target>Bild</target>
+            </trans-unit>
+            <trans-unit id="selectionList">
+                <target>Teaser Auswahl</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

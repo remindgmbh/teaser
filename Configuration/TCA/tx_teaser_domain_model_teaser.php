@@ -16,6 +16,11 @@ return [
             'l10n_mode' => 'prefixLangTitle',
             'label' => 'LLL:EXT:rmnd_teaser/Resources/Private/Language/locallang_tca.xlf:bodytext',
         ],
+        'categories' => [
+            'config' => [
+                'type' => 'category',
+            ],
+        ],
         'hidden' => [
             'config' => [
                 'items' => [
@@ -156,6 +161,8 @@ return [
                     l10n_parent,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
                     hidden,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
             ',
         ],

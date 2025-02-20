@@ -6,6 +6,7 @@ namespace Remind\Teaser\Domain\Model;
 
 use Remind\Extbase\Domain\Model\AbstractJsonSerializableEntity;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 class Teaser extends AbstractJsonSerializableEntity
 {
@@ -18,6 +19,32 @@ class Teaser extends AbstractJsonSerializableEntity
     protected string $link = '';
 
     protected ?FileReference $image = null;
+
+    /**  @var ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\Category> */
+    protected ?ObjectStorage $categories = null;
+
+    public function __construct()
+    {
+        $this->categories = new ObjectStorage();
+    }
+
+    /**
+     * @return ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\Category>|null
+     */
+    public function getCategories(): ?ObjectStorage
+    {
+        return $this->categories;
+    }
+
+    /**
+     * @param ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\Category> $categories
+     */
+    public function setCategories(ObjectStorage $categories): self
+    {
+        $this->categories = $categories;
+
+        return $this;
+    }
 
     public function getTitle(): string
     {

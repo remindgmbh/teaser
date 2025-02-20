@@ -2,7 +2,7 @@ plugin {
     tx_teaser {
         settings {
             jsonFields {
-                Remind\Teaser\Domain\Model\Teaser = title,subtitle,bodytext,image,link
+                Remind\Teaser\Domain\Model\Teaser = title,subtitle,bodytext,image,link,categories
             }
             displayNameFields = title,subtitle
         }

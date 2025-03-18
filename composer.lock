@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0efddabd3f9fc852c47f722a58dc0755",
+    "content-hash": "424fee304c29447e61fa1a692e74026d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2155,25 +2155,34 @@
         },
         {
             "name": "remind/extbase",
-            "version": "v1.2.0",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/remindgmbh/extbase.git",
-                "reference": "93ef040743148e51267d6d4efed211b04cdd219d"
+                "reference": "66d52fd41546098c0ac45a7745183378f44609de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/remindgmbh/extbase/zipball/93ef040743148e51267d6d4efed211b04cdd219d",
-                "reference": "93ef040743148e51267d6d4efed211b04cdd219d",
+                "url": "https://api.github.com/repos/remindgmbh/extbase/zipball/66d52fd41546098c0ac45a7745183378f44609de",
+                "reference": "66d52fd41546098c0ac45a7745183378f44609de",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.2",
-                "typo3/cms-core": "^12.4"
+                "remind/routing": "^1.0 | dev-develop",
+                "typo3/cms-backend": "^12.4",
+                "typo3/cms-core": "^12.4",
+                "typo3/cms-frontend": "^12.4"
             },
             "require-dev": {
-                "slevomat/coding-standard": "^8.11",
-                "squizlabs/php_codesniffer": "^3.7"
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan": "^1.12",
+                "remind/coding-standard": "^1.0",
+                "remind/headless": "^4.0 | dev-develop",
+                "saschaegerer/phpstan-typo3": "^1.10",
+                "slevomat/coding-standard": "^8.15",
+                "squizlabs/php_codesniffer": "^3.11"
             },
             "suggest": {
                 "remind/headless": "Using Remind\\Extbase\\Service\\JsonService requires remind/headless"
@@ -2181,9 +2190,7 @@
             "type": "typo3-cms-extension",
             "extra": {
                 "typo3/cms": {
-                    "web-dir": ".build/web",
-                    "extension-key": "rmnd_extbase",
-                    "cms-package-dir": "{$vendor-dir}/typo3/cms"
+                    "extension-key": "rmnd_extbase"
                 }
             },
             "autoload": {
@@ -2214,9 +2221,73 @@
             ],
             "support": {
                 "issues": "https://github.com/remindgmbh/extbase/issues",
-                "source": "https://github.com/remindgmbh/extbase/tree/v1.2.0"
+                "source": "https://github.com/remindgmbh/extbase/tree/v2.0.0"
             },
-            "time": "2024-05-02T13:44:28+00:00"
+            "time": "2025-02-27T15:40:02+00:00"
+        },
+        {
+            "name": "remind/routing",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/remindgmbh/routing.git",
+                "reference": "b16192bbff6098d011505a6f6475a8dd3eb28dea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/remindgmbh/routing/zipball/b16192bbff6098d011505a6f6475a8dd3eb28dea",
+                "reference": "b16192bbff6098d011505a6f6475a8dd3eb28dea",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^12.4",
+                "typo3/cms-extbase": "^12.4"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan": "^1.12",
+                "remind/coding-standard": "^1.0",
+                "saschaegerer/phpstan-typo3": "^1.10",
+                "slevomat/coding-standard": "^8.15",
+                "squizlabs/php_codesniffer": "^3.10"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "phpstan": {
+                    "includes": [
+                        "extension.neon"
+                    ]
+                },
+                "typo3/cms": {
+                    "extension-key": "rmnd_routing"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Remind\\Routing\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "REMIND GmbH",
+                    "email": "technik@remind.de"
+                },
+                {
+                    "name": "David Mellen",
+                    "email": "d.mellen@remind.de"
+                }
+            ],
+            "description": "REMIND - Routing",
+            "support": {
+                "issues": "https://github.com/remindgmbh/routing/issues",
+                "source": "https://github.com/remindgmbh/routing/tree/v1.0.2"
+            },
+            "time": "2025-03-13T08:16:24+00:00"
         },
         {
             "name": "symfony/cache",
@@ -4995,6 +5066,86 @@
                 "source": "https://github.com/TYPO3/class-alias-loader/tree/v1.2.0"
             },
             "time": "2024-10-11T08:11:39+00:00"
+        },
+        {
+            "name": "typo3/cms-backend",
+            "version": "v12.4.27",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/backend.git",
+                "reference": "d8082bb46d890d933d992b9bb27c969c7dc4307f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/backend/zipball/d8082bb46d890d933d992b9bb27c969c7dc4307f",
+                "reference": "d8082bb46d890d933d992b9bb27c969c7dc4307f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "psr/event-dispatcher": "^1.0",
+                "typo3/cms-core": "12.4.27"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "replace": {
+                "typo3/cms-about": "self.version",
+                "typo3/cms-context-help": "self.version",
+                "typo3/cms-cshmanual": "self.version",
+                "typo3/cms-func-wizards": "self.version",
+                "typo3/cms-recordlist": "self.version",
+                "typo3/cms-wizard-crpages": "self.version",
+                "typo3/cms-wizard-sortpages": "self.version"
+            },
+            "suggest": {
+                "typo3/cms-install": "To generate url to install tool in environment toolbar"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "typo3/cms": {
+                    "Package": {
+                        "protected": true,
+                        "serviceProvider": "TYPO3\\CMS\\Backend\\ServiceProvider",
+                        "partOfFactoryDefault": true,
+                        "partOfMinimalUsableSystem": true
+                    },
+                    "extension-key": "backend"
+                },
+                "branch-alias": {
+                    "dev-main": "12.4.x-dev"
+                },
+                "typo3/class-alias-loader": {
+                    "class-alias-maps": [
+                        "Migrations/Code/ClassAliasMap.php"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Backend\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TYPO3 CMS backend",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2025-02-11T08:45:48+00:00"
         },
         {
             "name": "typo3/cms-cli",

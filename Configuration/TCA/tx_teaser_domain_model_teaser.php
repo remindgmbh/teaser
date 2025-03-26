@@ -120,7 +120,7 @@ return [
         'enablecolumns' => [
             'disabled' => 'hidden',
         ],
-        'iconfile' => 'EXT:rmnd_teaser/Resources/Public/Icons/Extension.svg',
+        'iconfile' => 'EXT:rmnd_teaser/Resources/Public/Icons/tx_teaser_domain_model_teaser.svg',
         'label' => 'title',
         'label_alt' => 'subtitle',
         'label_alt_force' => true,

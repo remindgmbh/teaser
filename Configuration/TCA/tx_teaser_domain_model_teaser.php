@@ -126,6 +126,7 @@ return [
         'label_alt_force' => true,
         'languageField' => 'sys_language_uid',
         'origUid' => 't3_origuid',
+        'searchFields' => 'title,subtitle,bodytext',
         'sortby' => 'sorting',
         'title' => 'LLL:EXT:rmnd_teaser/Resources/Private/Language/locallang_tca.xlf:teaser',
         'translationSource' => 'l10n_source',

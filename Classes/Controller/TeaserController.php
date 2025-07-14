@@ -46,14 +46,12 @@ class TeaserController extends ActionController
                 ? json_decode(json_encode($record) ?: '', true)
                 : null;
 
-            if (
-                $record &&
-                $categories
-            ) {
-                $record['categories'] = $this->serializeCategories($categories);
+            if ($record) {
+                if ($categories) {
+                    $record['categories'] = $this->serializeCategories($categories);
+                }
+                $record['link'] = $this->processTypolinkUrl($record['link']);
             }
-
-            $record['link'] = $this->processTypolinkUrl($record['link']);
 
             return $record;
         }, $recordUids);

@@ -14,7 +14,7 @@
                             <renderType>selectMultipleSideBySide</renderType>
                             <size>7</size>
                             <foreign_table>tx_teaser_domain_model_teaser</foreign_table>
-                            <foreign_table_where>AND tx_teaser_domain_model_teaser.pid = (SELECT pages FROM tt_content WHERE uid=###THIS_UID###)</foreign_table_where>
+                            <foreign_table_where>AND FIND_IN_SET(tx_teaser_domain_model_teaser.pid, '###REC_FIELD_pages###')</foreign_table_where>
                         </config>
                     </records>
                 </el>

@@ -122,7 +122,7 @@ return [
         ],
         'iconfile' => 'EXT:rmnd_teaser/Resources/Public/Icons/tx_teaser_domain_model_teaser.svg',
         'label' => 'title',
-        'label_alt' => 'subtitle',
+        'label_alt' => 'subtitle,uid',
         'label_alt_force' => true,
         'languageField' => 'sys_language_uid',
         'origUid' => 't3_origuid',

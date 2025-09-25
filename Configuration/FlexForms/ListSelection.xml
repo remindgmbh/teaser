@@ -3,20 +3,32 @@
     <sheets>
         <teaser>
             <ROOT>
-                <sheetTitle>LLL:EXT:rmnd_teaser/Resources/Private/Language/locallang_flex.xlf:records</sheetTitle>
+                <sheetTitle>
+                    LLL:EXT:rmnd_teaser/Resources/Private/Language/locallang_flex.xlf:records</sheetTitle>
                 <type>array</type>
                 <el>
                     <records>
-                        <label>LLL:EXT:rmnd_teaser/Resources/Private/Language/locallang_flex.xlf:selection</label>
+                        <label>
+                            LLL:EXT:rmnd_teaser/Resources/Private/Language/locallang_flex.xlf:selection</label>
                         <description></description>
                         <config>
                             <type>select</type>
                             <renderType>selectMultipleSideBySide</renderType>
                             <size>7</size>
                             <foreign_table>tx_teaser_domain_model_teaser</foreign_table>
-                            <foreign_table_where>AND FIND_IN_SET(tx_teaser_domain_model_teaser.pid, '###REC_FIELD_pages###')</foreign_table_where>
+                            <foreign_table_where>AND FIND_IN_SET(tx_teaser_domain_model_teaser.pid,
+                                '###REC_FIELD_pages###')</foreign_table_where>
                         </config>
                     </records>
+                    <enableLink>
+                        <label>
+                            LLL:EXT:rmnd_teaser/Resources/Private/Language/locallang_flex.xlf:enable_link</label>
+                        <config>
+                            <type>check</type>
+                            <renderType>checkboxToggle</renderType>
+                            <default>1</default>
+                        </config>
+                    </enableLink>
                 </el>
             </ROOT>
         </teaser>

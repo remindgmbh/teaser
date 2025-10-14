@@ -38,7 +38,7 @@ class TeaserController extends ActionController
 
         $recordUids = explode(',', $flexFormContent['records'] ?? '');
 
-        $records = array_map(function ($recordUid) {
+        $records = array_map(function ($recordUid) use ($contentObject) {
             $record = $this->teaserRepository->findByUid((int) $recordUid);
             $categories = $record?->getCategories()?->toArray();
 
@@ -51,6 +51,10 @@ class TeaserController extends ActionController
                     $record['categories'] = $this->serializeCategories($categories);
                 }
                 $record['link'] = $this->processTypolinkUrl($record['link']);
+
+                if ($record['bodytext']) {
+                    $record['bodytext'] = $contentObject->parseFunc($record['bodytext'], null, '< lib.parseFunc_links');
+                }
             }
 
             return $record;

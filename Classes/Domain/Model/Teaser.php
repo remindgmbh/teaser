@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Remind\Teaser\Domain\Model;
 
-use Remind\Extbase\Domain\Model\AbstractJsonSerializableEntity;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
-class Teaser extends AbstractJsonSerializableEntity
+class Teaser extends AbstractEntity
 {
     protected string $title = '';
 

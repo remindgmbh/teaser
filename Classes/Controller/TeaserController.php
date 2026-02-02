@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace Remind\Teaser\Controller;
 
-use JsonSerializable;
 use Psr\Http\Message\ResponseInterface;
+use Remind\Headless\Service\FilesService;
+use Remind\Teaser\Domain\Model\Teaser;
 use Remind\Teaser\Domain\Repository\TeaserRepository;
 use TYPO3\CMS\Core\LinkHandling\TypoLinkCodecService;
 use TYPO3\CMS\Core\Service\FlexFormService;
@@ -22,6 +23,7 @@ class TeaserController extends ActionController
     public function __construct(
         private readonly TeaserRepository $teaserRepository,
         private readonly FlexFormService $flexFormService,
+        private readonly FilesService $filesService,
     ) {
         $this->typoLinkCodecService = GeneralUtility::makeInstance(TypoLinkCodecService::class);
         $this->contentObjectRenderer = GeneralUtility::makeInstance(ContentObjectRenderer::class);
@@ -42,9 +44,17 @@ class TeaserController extends ActionController
             $record = $this->teaserRepository->findByUid((int) $recordUid);
             $categories = $record?->getCategories()?->toArray();
 
-            $record = $record instanceof JsonSerializable
-                ? json_decode(json_encode($record) ?: '', true)
+            $record = $record instanceof Teaser
+                ? [
+                    'uid' => $record->getUid(),
+                    'pid' => $record->getPid(),
+                    'title' => $record->getTitle(),
+                    'bodytext' => $record->getBodytext(),
+                    'link' => $record->getLink(),
+                    'image' => $this->filesService->processImage($record->getImage()?->getOriginalResource()),
+                ]
                 : null;
+
 
             if ($record) {
                 if ($categories) {

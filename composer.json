@@ -36,6 +36,7 @@
     },
     "require": {
         "remind/extbase": "13.x-dev | dev-develop",
+        "remind/headless": "13.x-dev | dev-develop",
         "typo3/cms-core": "^13.4",
         "typo3/cms-extbase": "^13.4",
         "typo3/cms-frontend": "^13.4"

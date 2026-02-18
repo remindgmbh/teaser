@@ -65,10 +65,12 @@ class TeaserController extends ActionController
                 if ($categories) {
                     $record['categories'] = $this->serializeCategories($categories);
                 }
-                $record['link'] = $this->processTypolinkUrl($record['link']);
+                $record['link'] = is_string($record['link']) ? $this->processTypolinkUrl($record['link']) : '';
 
                 if ($record['bodytext']) {
-                    $record['bodytext'] = $contentObject->parseFunc($record['bodytext'], null, '< lib.parseFunc_links');
+                    $record['bodytext'] = is_string($record['bodytext'])
+                        ? $contentObject->parseFunc($record['bodytext'], null, '< lib.parseFunc_links')
+                        : '';
                 }
             }
 

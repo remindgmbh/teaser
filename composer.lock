@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0844d09f2f7cd5cad54d50453aa9a33",
+    "content-hash": "bb6ae4cdeb13ba0daf0cc96483793983",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -815,6 +815,95 @@
             "time": "2025-04-09T20:32:01+00:00"
         },
         {
+            "name": "friendsoftypo3/headless",
+            "version": "v4.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-Headless/headless.git",
+                "reference": "3e9175a9e384f1b5b529e24e27d25c419b3ab711"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-Headless/headless/zipball/3e9175a9e384f1b5b529e24e27d25c419b3ab711",
+                "reference": "3e9175a9e384f1b5b529e24e27d25c419b3ab711",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "typo3/cms-core": "^12.4 || ^13.4",
+                "typo3/cms-install": "^12.4 || ^13.4"
+            },
+            "conflict": {
+                "typo3/cms-core": "<12.4.21 || >=13.4 <13.4.18"
+            },
+            "require-dev": {
+                "ergebnis/composer-normalize": "^2.43",
+                "friendsofphp/php-cs-fixer": "^v3",
+                "helmich/typo3-typoscript-lint": "^v3",
+                "justinrainbow/json-schema": "^5",
+                "phpspec/prophecy-phpunit": "^2",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "^1.12",
+                "phpunit/phpcov": "^8 || ^9 || ^10",
+                "saschaegerer/phpstan-typo3": "^1.1",
+                "seld/jsonlint": "^1.11",
+                "symfony/yaml": "^6.1 || ^7.1",
+                "typo3/cms-form": "^12.4 || ^13.3",
+                "typo3/coding-standards": "^0.8",
+                "typo3/testing-framework": "^8.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "app-dir": ".Build",
+                    "web-dir": ".Build/public",
+                    "extension-key": "headless"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FriendsOfTYPO3\\Headless\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Tymoteusz Motylewski",
+                    "role": "Head"
+                },
+                {
+                    "name": "Łukasz Uznański",
+                    "role": "Developer"
+                },
+                {
+                    "name": "TYPO3 PWA Initiative",
+                    "email": "extensions@macopedia.pl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This extension provides way to output content from TYPO3 in JSON format.",
+            "keywords": [
+                "headless",
+                "json",
+                "pwa",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://github.com/TYPO3-Headless/headless/issues",
+                "source": "https://github.com/TYPO3-Headless/headless/tree/v4.7.3"
+            },
+            "funding": [
+                {
+                    "url": "https://buy.stripe.com/bIYcPX1wd9hrawUfZ0",
+                    "type": "custom"
+                }
+            ],
+            "time": "2025-09-09T11:03:45+00:00"
+        },
+        {
             "name": "guzzlehttp/guzzle",
             "version": "7.10.0",
             "source": {
@@ -1270,6 +1359,64 @@
                 "source": "https://github.com/Masterminds/html5-php/tree/2.10.0"
             },
             "time": "2025-07-25T09:04:22+00:00"
+        },
+        {
+            "name": "nikic/php-parser",
+            "version": "v5.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "dca41cd15c2ac9d055ad70dbfd011130757d1f82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/dca41cd15c2ac9d055ad70dbfd011130757d1f82",
+                "reference": "dca41cd15c2ac9d055ad70dbfd011130757d1f82",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-json": "*",
+                "ext-tokenizer": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "ircmaxell/php-yacc": "^0.0.7",
+                "phpunit/phpunit": "^9.0"
+            },
+            "bin": [
+                "bin/php-parse"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpParser\\": "lib/PhpParser"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "parser",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/nikic/PHP-Parser/issues",
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.7.0"
+            },
+            "time": "2025-12-06T11:56:16+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -2131,6 +2278,67 @@
                 "source": "https://github.com/remindgmbh/extbase/tree/v13"
             },
             "time": "2025-12-02T09:53:24+00:00"
+        },
+        {
+            "name": "remind/headless",
+            "version": "v13.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/remindgmbh/headless.git",
+                "reference": "0de1bdbe9eeb9bd8570b20b2533204a5dd48f05a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/remindgmbh/headless/zipball/0de1bdbe9eeb9bd8570b20b2533204a5dd48f05a",
+                "reference": "0de1bdbe9eeb9bd8570b20b2533204a5dd48f05a",
+                "shasum": ""
+            },
+            "require": {
+                "friendsoftypo3/headless": "^4.6",
+                "php": "^8",
+                "typo3/cms-core": "^13.4"
+            },
+            "require-dev": {
+                "apache-solr-for-typo3/solr": "^13",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan": "^1.11",
+                "remind/coding-standard": "^1.0",
+                "saschaegerer/phpstan-typo3": "^1.10",
+                "slevomat/coding-standard": "^8.14",
+                "squizlabs/php_codesniffer": "^3.7"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "rmnd_headless"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Remind\\Headless\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "REMIND GmbH",
+                    "email": "technik@remind.de"
+                },
+                {
+                    "name": "David Mellen",
+                    "email": "d.mellen@remind.de"
+                }
+            ],
+            "description": "REMIND - Headless",
+            "support": {
+                "issues": "https://github.com/remindgmbh/headless/issues",
+                "source": "https://github.com/remindgmbh/headless/tree/v13"
+            },
+            "time": "2026-02-13T12:50:43+00:00"
         },
         {
             "name": "remind/routing",
@@ -5586,6 +5794,70 @@
             "time": "2026-01-20T07:17:00+00:00"
         },
         {
+            "name": "typo3/cms-fluid",
+            "version": "v13.4.24",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/fluid.git",
+                "reference": "234fc1417a0f77e35eff5c1fa714afb199933137"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/fluid/zipball/234fc1417a0f77e35eff5c1fa714afb199933137",
+                "reference": "234fc1417a0f77e35eff5c1fa714afb199933137",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/dependency-injection": "^7.2",
+                "typo3/cms-core": "13.4.24",
+                "typo3/cms-extbase": "13.4.24",
+                "typo3fluid/fluid": "^4.5.0"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "typo3/cms": {
+                    "Package": {
+                        "protected": true,
+                        "serviceProvider": "TYPO3\\CMS\\Fluid\\ServiceProvider",
+                        "partOfFactoryDefault": true,
+                        "partOfMinimalUsableSystem": true
+                    },
+                    "extension-key": "fluid"
+                },
+                "branch-alias": {
+                    "dev-main": "13.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Fluid\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TYPO3 CMS Fluid Integration - Integration of the Fluid templating engine into TYPO3.",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org/other/typo3/view-helper-reference/main/en-us/",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2026-01-20T07:17:00+00:00"
+        },
+        {
             "name": "typo3/cms-frontend",
             "version": "v13.4.24",
             "source": {
@@ -5646,6 +5918,74 @@
                 }
             ],
             "description": "TYPO3 CMS Frontend",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2026-01-20T07:17:00+00:00"
+        },
+        {
+            "name": "typo3/cms-install",
+            "version": "v13.4.24",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/install.git",
+                "reference": "061ffe7617e43b65fdced0240787845c403d5662"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/install/zipball/061ffe7617e43b65fdced0240787845c403d5662",
+                "reference": "061ffe7617e43b65fdced0240787845c403d5662",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "~4.3.3",
+                "guzzlehttp/promises": "^2.0.3",
+                "nikic/php-parser": "^5.4.0",
+                "symfony/finder": "^7.2",
+                "symfony/http-foundation": "^7.2",
+                "typo3/cms-core": "13.4.24",
+                "typo3/cms-extbase": "13.4.24",
+                "typo3/cms-fluid": "13.4.24"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "typo3/cms": {
+                    "Package": {
+                        "protected": true,
+                        "serviceProvider": "TYPO3\\CMS\\Install\\ServiceProvider",
+                        "partOfFactoryDefault": true,
+                        "partOfMinimalUsableSystem": true
+                    },
+                    "extension-key": "install"
+                },
+                "branch-alias": {
+                    "dev-main": "13.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Install\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TYPO3 CMS Install Tool - The Install Tool is used for installation, upgrade, system administration and setup tasks.",
             "homepage": "https://typo3.org",
             "support": {
                 "chat": "https://typo3.org/help",
@@ -6465,7 +6805,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "remind/extbase": 20
+        "remind/extbase": 20,
+        "remind/headless": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

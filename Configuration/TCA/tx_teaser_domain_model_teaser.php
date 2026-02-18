@@ -26,8 +26,8 @@ return [
                 'items' => [
                     [
                         'invertStateDisplay' => true,
-                        0 => '',
-                        1 => '',
+                        'label' => '',
+                        'value' => 1,
                     ],
                 ],
                 'renderType' => 'checkboxToggle',
@@ -59,8 +59,8 @@ return [
                     . ' AND {#tx_teaser_domain_model_teaser}.{#sys_language_uid} IN (-1,0)',
                 'items' => [
                     [
-                        '',
-                        0,
+                        'label' => '',
+                        'value' => 0,
                     ],
                 ],
                 'renderType' => 'selectSingle',

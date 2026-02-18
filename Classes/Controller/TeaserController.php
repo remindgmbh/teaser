@@ -51,6 +51,7 @@ class TeaserController extends ActionController
                     'title' => $record->getTitle(),
                     'bodytext' => $record->getBodytext(),
                     'link' => $record->getLink(),
+                    'subtitle' => $record->getSubtitle(),
                     ...(
                         $record->getImage() ? [
                             'image' => $this->filesService->processImage($record->getImage()->getOriginalResource()),
